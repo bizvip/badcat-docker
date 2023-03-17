@@ -126,7 +126,7 @@ services:
       #      - ./mysql/my.cnf:/etc/my.cnf
       #      - ./mysql/mysql-data:/var/lib/mysql
       - ./mysql/bitnami.my.cnf:/opt/bitnami/mysql/conf/my.cnf
-      - ./mysql/data:/bitnami/mysql/data
+      - ./data/mysql:/bitnami/mysql/data
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'fuck123sql'

@@ -75,8 +75,8 @@ services:
     image: redis/redis-stack:latest
     restart: always
     ports:
-      - "8010:6379"
-      - "8011:8001"
+      - "8090:6379"
+      - "8091:8001"
     networks:
       app_net:
         ipv4_address: 172.12.1.40
@@ -126,7 +126,7 @@ services:
       #      - ./mysql/my.cnf:/etc/my.cnf
       #      - ./mysql/mysql-data:/var/lib/mysql
       - ./mysql/bitnami.my.cnf:/opt/bitnami/mysql/conf/my.cnf
-      - ./data/mysql:/bitnami/mysql/data
+      - ./data/mysql-data:/bitnami/mysql/data
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'fuck123sql'
